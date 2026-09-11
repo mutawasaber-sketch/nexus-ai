@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nexus AI - Smart Chatbot</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <h1 class="logo">
+                    <span class="logo-icon">🤖</span> Nexus AI
+                </h1>
+                <p class="subtitle">Your Intelligent Assistant</p>
+            </div>
+        </header>
+
+        <!-- Main Chat Area -->
+        <main class="chat-container">
+            <div class="chat-messages" id="chatMessages">
+                <div class="message-group welcome">
+                    <div class="bot-message">
+                        <div class="message-content">
+                            <p>مرحباً! 👋 أنا Nexus AI</p>
+                            <p>يمكنك سؤالي عن أي شيء وسأحاول مساعدتك!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Chat Input -->
+            <div class="chat-input-area">
+                <form id="chatForm" class="chat-form">
+                    <div class="input-wrapper">
+                        <input 
+                            type="text" 
+                            id="userInput" 
+                            class="chat-input" 
+                            placeholder="Type your message here... (اكتب رسالتك هنا)"
+                            autocomplete="off"
+                        >
+                        <button type="submit" class="send-btn" id="sendBtn">
+                            <span>Send</span>
+                            <span class="send-icon">➤</span>
+                        </button>
+                    </div>
+                </form>
+                <div class="chat-info">
+                    <small>Press Enter to send • اضغط Enter للإرسال</small>
+                </div>
+            </div>
+        </main>
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h3>Menu</h3>
+                <button class="new-chat-btn" id="newChatBtn">+ New Chat</button>
+            </div>
+            <div class="sidebar-content">
+                <div class="settings-section">
+                    <h4>Settings</h4>
+                    <label class="toggle-label">
+                        <input type="checkbox" id="darkMode">
+                        <span>Dark Mode</span>
+                    </label>
+                </div>
+            </div>
+        </aside>
+    </div>
+
+    <!-- Loading Indicator -->
+    <div class="loading-indicator" id="loadingIndicator">
+        <div class="spinner"></div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
